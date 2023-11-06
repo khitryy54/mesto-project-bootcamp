@@ -2,7 +2,7 @@
   width: 22px;
   height: 19px;
   border: none;
-  background-image: url(../images/heart.svg);
+  background-image: url(../../../images/heart.svg);
   background-color: #FFF;
   background-size: cover;
   padding: 0;
@@ -12,5 +12,5 @@
 }
 
 .element__heart:hover {
-  background-image: url(../images/heart-hover.svg);
+  background-image: url(../../../images/heart-hover.svg);
 }

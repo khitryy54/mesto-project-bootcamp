@@ -1,0 +1,12 @@
+.element__caption {
+  background-color: #fff;
+  margin: 0;
+  padding: 25px 21px 25px 21px;
+  display: grid;
+  grid-template-columns: auto 22px;
+  gap: 21px;
+  /* justify-content: space-between; */
+  align-items: center;
+  border-radius: 0 0 10px 10px;
+  /* gap: 20px; */
+}

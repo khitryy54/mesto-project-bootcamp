@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./pages/index.css">
+  <title>Проект Mesto</title>
+</head>
+<body class="root">
+  <div class="page">
+    <header class="header">
+      <div class="header__logo"></div>
+    </header>
+    <main class="content">
+      <section class="profile">
+        <img class="profile__picture" src="./images/profile.jpg" alt="Фото профиля">
+        <div class="profile__info">
+          <h1 class="profile__name block">Жак-Ив Кусто</h1>
+          <button class="profile__edit-button"></button>
+          <p class="profile__description block">Исследователь океана</p>
+        </div>
+        <button class="profile__add-button"></button>
+      </section>
+      <section class="elements">
+        <figure class="element">
+          <img class="element__image" src="./images/karachaevsk.jpg" alt="Карачаевск">
+          <figcaption class="element__caption">
+            <h2 class="element__title">Карачаевск</h2>
+            <button class="element__heart"></button>
+          </figcaption>
+        </figure>
+        <figure class="element">
+          <img class="element__image" src="./images/elbrus.jpg" alt="Эльбрус">
+          <figcaption class="element__caption">
+            <h2 class="element__title">Гора Эльбрус</h2>
+            <button class="element__heart"></button>
+          </figcaption>
+        </figure>
+        <figure class="element">
+          <img class="element__image" src="./images/dombay.jpg" alt="Домбай">
+          <figcaption class="element__caption">
+            <h2 class="element__title">Домбай</h2>
+            <button class="element__heart"></button>
+          </figcaption>
+        </figure>
+        <figure class="element">
+          <img class="element__image" src="./images/elbrus.jpg" alt="Эльбрус">
+          <figcaption class="element__caption">
+            <h2 class="element__title">Гора Эльбрус</h2>
+            <button class="element__heart"></button>
+          </figcaption>
+        </figure>
+        <figure class="element">
+          <img class="element__image" src="./images/dombay.jpg" alt="Домбай">
+          <figcaption class="element__caption">
+            <h2 class="element__title">Домбай</h2>
+            <button class="element__heart element__heart_active"></button>
+          </figcaption>
+        </figure>
+        <figure class="element">
+          <img class="element__image" src="./images/karachaevsk.jpg" alt="Карачаево-Черкессия">
+          <figcaption class="element__caption">
+            <h2 class="element__title block">Карачаево-Черкессия</h2>
+            <button class="element__heart"></button>
+          </figcaption>
+        </figure>
+      </section>
+    </main>
+    <footer class="footer">© 2020 Mesto Russia</footer>
+  </div>
+  <div class="popup">
+    <div class="popup__container">
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form>
+        <input type="text" class="popup__input" name="name" value="Жак-Ив Кусто">
+        <input type="text" class="popup__input" name="about" value="Исследователь океана">
+        <button class="popup__button" type="submit">Сохранить</button>
+      </form>
+      <button class="popup__close-button"></button>
+    </div>
+  </div>
+</body>
+</html>

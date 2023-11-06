@@ -1,0 +1,16 @@
+.element__heart {
+  width: 22px;
+  height: 19px;
+  border: none;
+  background-image: url(../images/heart.svg);
+  background-color: #FFF;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  flex-basis: 22px;
+  cursor: pointer;
+}
+
+.element__heart:hover {
+  background-image: url(../images/heart-hover.svg);
+}

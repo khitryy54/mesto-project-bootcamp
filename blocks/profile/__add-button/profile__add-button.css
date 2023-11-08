@@ -3,7 +3,7 @@
   height: 50px;
   background-image: url(../../../images/add-button.svg);
   background-size: cover;
-  background-color: #000;
+  background-color: transparent;
   border: none;
   cursor: pointer;
 }

@@ -2,7 +2,7 @@
   width: 24px;
   height: 24px;
   background-image: url(../../../images/edit-button.svg);
-  background-color: #000;
+  background-color: transparent;
   border: none;
   align-self: center;
   background-size: cover;

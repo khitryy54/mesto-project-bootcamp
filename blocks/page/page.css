@@ -3,6 +3,10 @@
   min-width: 320px;
   margin: 0 auto;
   background-color: #000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }

@@ -4,8 +4,8 @@
   position: absolute;
   top: -40px;
   right: -40px;
-  background-image: url(../images/close.svg);
-  background-color: black;
+  background-image: url(../../../images/close.svg);
+  background-color: transparent;
   background-size: cover;
   border: none;
   cursor: pointer;

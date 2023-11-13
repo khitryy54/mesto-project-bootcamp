@@ -6,17 +6,17 @@
   max-width: 880px;
   width: 100%;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 919px) {
   .header {
-    margin: 0 20px;
+    padding: 45px 20px 41px;
   }
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 633px) {
   .header {
-    margin: 0;
     padding: 28px 27px 31.6px;
   }
 }

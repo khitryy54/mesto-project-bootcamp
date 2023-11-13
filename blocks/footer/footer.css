@@ -11,15 +11,16 @@
   font-weight: 400;
   line-height: normal;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 919px) {
   .footer {
-    margin: 0 20px
+    padding: 67px 20px 60px;
   }
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 633px) {
   .footer {
     margin: 0;
     padding: 48px 19px 36px;

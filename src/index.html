@@ -14,7 +14,7 @@
     </header>
     <main class="content">
       <section class="profile">
-        <img class="profile__picture" src="./images/profile.jpg" alt="Фото профиля">
+        <img class="profile__picture" src="<%=require('./images/profile.jpg')%>" alt="Фото профиля">
         <div class="profile__info">
           <h1 class="profile__name block">Жак-Ив Кусто</h1>
           <button class="profile__edit-button" type="button" aria-label="Редактировать"></button>
@@ -27,23 +27,27 @@
     </main>
     <footer class="footer">© 2020 Mesto Russia</footer>
   </div> 
-  <div class="popup">
+  <div class="popup popup_type_edit">
     <div class="popup__container">
       <h2 class="popup__title">Редактировать профиль</h2>
-      <form name="edit-profile" class="popup__form">
-        <input type="text" class="popup__input popup__input_type_name" name="name" placeholder="Имя">
-        <input type="text" class="popup__input popup__input_type_about" name="about" placeholder="Профессия">
+      <form name="edit-profile" class="popup__form" novalidate>
+        <input type="text" id="name" class="popup__input popup__input_type_name" name="name" placeholder="Имя" required minlength="2" maxlength="40">
+        <span id="error-name" class="error-message"></span>
+        <input type="text" id="about" class="popup__input popup__input_type_about" name="about" placeholder="Профессия" required minlength="2" maxlength="200">
+        <span id="error-about" class="error-message"></span>
         <button class="popup__button" type="submit">Сохранить</button>
       </form>
       <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
     </div>
   </div>
-  <div class="popup">
+  <div class="popup popup_type_new-place">
     <div class="popup__container">
       <h2 class="popup__title">Новое место</h2>
-      <form name="new-place" class="popup__form">
-        <input type="text" class="popup__input popup__input_type_name" name="name" placeholder="Название">
-        <input type="text" class="popup__input popup__input_type_link" name="link" placeholder="Ссылка на картинку">
+      <form name="new-place" class="popup__form" novalidate>
+        <input type="text" id="place" class="popup__input popup__input_type_place" name="place" placeholder="Название" required minlength="2" maxlength="30">
+        <span id="error-place" class="error-message"></span>
+        <input type="url" id="link" class="popup__input popup__input_type_link" name="link" placeholder="Ссылка на картинку" required>
+        <span id="error-link" class="error-message"></span>
         <button class="popup__button" type="submit">Сохранить</button>
       </form>
       <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
@@ -56,7 +60,6 @@
       <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
     </figure>
   </div>
-
   <template class="element-template">
     <article class="element">
       <img class="element__image" src="" alt="">

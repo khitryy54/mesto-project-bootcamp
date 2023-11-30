@@ -11,4 +11,4 @@
 
 **GitHub Pages**
 
-* [Ссылка на проект, опубликованный на GitHub Pages](https://khitryy54.github.io/russian-travel-bootcamp)
+* [Ссылка на проект, опубликованный на GitHub Pages](https://khitryy54.github.io/mesto-project-bootcamp/)

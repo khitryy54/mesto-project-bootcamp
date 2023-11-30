@@ -35,3 +35,6 @@
 @import url(../blocks/popup/__image-caption.css/popup__image-caption.css);
 @import url(../blocks/error-message/error-message.css);
 @import url(../blocks/popup/__input/_type/_error/popup__input_type_error.css);
+@import url(../blocks/element/__likes-counter/element__likes-counter.css);
+@import url(../blocks/profile/__picture-container/profile__picture-container.css);
+@import url(../blocks/profile/__picture-edit-button/profile__picture-edit-button.css);

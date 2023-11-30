@@ -1,13 +1,3 @@
-const popups = document.querySelectorAll('.popup');
-
-popups.forEach(function(item) {
-  item.querySelector('.popup__close-button').addEventListener('click', () => closePopup(item));
-  item.addEventListener('mousedown', (event) => {
-    if (event.target.classList.contains('popup')) {
-      closePopup(item);
-    }
-  })
-})
 
 function closeByEsc(evt) {
   if (evt.key === 'Escape') {

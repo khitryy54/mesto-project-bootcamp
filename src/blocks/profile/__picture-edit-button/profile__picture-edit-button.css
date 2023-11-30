@@ -1,0 +1,19 @@
+.profile__picture-edit-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.80);
+  background-image: url('../../../images/profile-picture-edit.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  display: none;
+  cursor: pointer;
+}
+
+.profile__picture-container:hover > .profile__picture-edit-button {
+  display: block;
+}

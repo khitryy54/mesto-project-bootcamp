@@ -1,34 +1,58 @@
-const elementTemplate = document.querySelector('.element-template').content.querySelector('.element');
-const bigImagePopup = document.querySelector('.popup_type_image');
-
-import {openPopup} from './modal.js'
-
-export function createElement(item) {
+export function createElement(item, myID, elementTemplate, handleImageClick, deleteCard, addLike, removeLike) {
   const newElement = elementTemplate.cloneNode(true);
-  
   const elementImage = newElement.querySelector('.element__image');
   elementImage.setAttribute("src", item.link);
   elementImage.setAttribute("alt", item.name);
-  elementImage.addEventListener('click', () => {
-    const popupImage = bigImagePopup.querySelector('.popup__image');
-    const popupImageCaption = bigImagePopup.querySelector('.popup__image-caption');
-    popupImage.setAttribute('src', item.link);
-    popupImage.setAttribute('alt', item.name);
-    popupImageCaption.textContent = item.name;
-    openPopup(bigImagePopup);
-  })
+  elementImage.addEventListener('click', () => handleImageClick(item.name, item.link));
 
   const elementTitle = newElement.querySelector('.element__title');
   elementTitle.textContent = item.name;
 
   const buttonDelete = newElement.querySelector('.element__trash');
-	buttonDelete.addEventListener('click', () => {
-		newElement.remove();
-	})
+  if (item.owner._id === myID) {
+    buttonDelete.addEventListener('click', () => {
+      deleteCard(item._id) 
+        .then(() => {
+          newElement.remove();
+        })
+        .catch((err) => {
+          console.log(err);
+        })
+    }) 
+  } else {
+    buttonDelete.remove();
+  }
 
   const buttonLike = newElement.querySelector('.element__heart');
+  const likesCounter = newElement.querySelector('.element__likes-counter');
+  
+  if(item.likes.find((like) => like._id === myID)) {
+    buttonLike.classList.add("element__heart_active");
+  }
+  likesCounter.textContent = item.likes.length;
+
   buttonLike.addEventListener('click', () => {
-    buttonLike.classList.toggle("element__heart_active");
+    if(item.likes.find((like) => like._id === myID)) {
+      removeLike(item._id)
+        .then((updatedItem) => {
+          item = updatedItem;
+          buttonLike.classList.remove("element__heart_active");
+          likesCounter.textContent = item.likes.length;
+        })
+        .catch((err) => {
+          console.log(err);
+        })
+    } else {
+      addLike(item._id)
+        .then((updatedItem) => {
+          item = updatedItem;
+          buttonLike.classList.add("element__heart_active");
+          likesCounter.textContent = item.likes.length;
+        })
+        .catch((err) => {
+          console.log(err);
+        })
+    }
   })
 
   return newElement;

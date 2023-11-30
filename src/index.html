@@ -12,7 +12,10 @@
     </header>
     <main class="content">
       <section class="profile">
-        <img class="profile__picture" src="<%=require('./images/profile.jpg')%>" alt="Фото профиля">
+        <div class="profile__picture-container">
+          <img class="profile__picture" src="<%=require('./images/profile.jpg')%>" alt="Фото профиля">
+          <button class="profile__picture-edit-button"></button>
+        </div>
         <div class="profile__info">
           <h1 class="profile__name block">Жак-Ив Кусто</h1>
           <button class="profile__edit-button" type="button" aria-label="Редактировать"></button>
@@ -51,6 +54,24 @@
       <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
     </div>
   </div>
+  <div class="popup popup_type_update-avatar">
+    <div class="popup__container">
+      <h2 class="popup__title">Обновить аватар</h2>
+      <form name="avatar-link" class="popup__form" novalidate>
+        <input type="url" id="avatar-link" class="popup__input popup__input_type_link" name="link" placeholder="Ссылка на картинку" required>
+        <span id="error-avatar-link" class="error-message"></span>
+        <button class="popup__button" type="submit">Сохранить</button>
+      </form>
+      <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
+    </div>
+  </div>
+  <!-- <div class="popup popup_type_card-deletion">
+    <div class="popup__container">
+      <h2 class="popup__title">Вы уверены?</h2>
+      <button class="popup__button" type="submit">Да</button>
+      <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
+    </div>
+  </div> -->
   <div class="popup popup_type_image">
     <figure class="popup__image-container">
       <img class="popup__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg" alt="Картинка">
@@ -63,7 +84,10 @@
       <img class="element__image" src="" alt="">
       <div class="element__caption">
         <h2 class="element__title block"></h2>
-        <button class="element__heart" type="button" aria-label="Нравится"></button>
+        <div class="element__likes">
+          <button class="element__heart" type="button" aria-label="Нравится"></button>
+          <p class="element__likes-counter">0</p>
+        </div>
       </div>
       <button class="element__trash"></button>
     </article>

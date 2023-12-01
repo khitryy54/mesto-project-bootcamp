@@ -52,6 +52,9 @@ export function enableValidation(validationConfig) {
     const inputList = form.querySelectorAll(validationConfig.inputSelector);
     const submitButton = form.querySelector(validationConfig.submitButtonSelector);
     checkForm(form, submitButton);
+    form.addEventListener('reset', () => {
+      disableButton(submitButton);
+    });
     inputList.forEach(input => {
       input.addEventListener('input', () => {
         handleInput(input, validationConfig);
